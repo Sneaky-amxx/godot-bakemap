@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://map/quakestyle_null_textured.gltf" type="PackedScene" id=1]
+
+[sub_resource type="Environment" id=1]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="quakestyle_null_textured" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.258263, 0.966075, 0, -0.966075, -0.258263, 137.69, 189.792, 72.9496 )
+
+[node name="BakedLightmap" type="BakedLightmap" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 132.978, 31.874, 62.1744 )
+extents = Vector3( 208.731, 35.286, 94.9192 )
